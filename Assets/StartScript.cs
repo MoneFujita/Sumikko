@@ -2,19 +2,24 @@
 using System.Collections;
 
 public class StartScript : MonoBehaviour {
+	public ChangeScript changeScript;
+	Vector3 poss;
+
 
 	// Use this for initialization
 	void Start () {
 	
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if (this.transform.position.x < -6 || this.transform.position.x > 12) {
-			this.transform.position = new Vector3 (2.0f,4.0f,0);
+			poss = changeScript.Pos;
+			this.transform.position = poss;
 		}
-		if (this.transform.position.y < 0 || this.transform.position.y > 8) {
-			this.transform.position = new Vector3 (2.0f,4.0f,0);
+		if (this.transform.position.y < -2 || this.transform.position.y > 8) {
+			poss = changeScript.Pos;
+			this.transform.position = poss;
 		}
 	}
 		
