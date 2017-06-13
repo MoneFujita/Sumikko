@@ -29,7 +29,7 @@ public class ChangeScript : MonoBehaviour {
 	}
 
 	private IEnumerator ChangePos(Collider col){
-		yield return new WaitForSeconds (0.1f);
+		yield return new WaitForSeconds (0.1f); 
 		pos = col.gameObject.GetComponent<ChangeScript> ().pos;
 	}
 }
